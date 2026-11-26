@@ -1,0 +1,27 @@
+{"id":"sp-000516-v6","query":"sfr listed for sale in thornton co.","spec_id":"sp-000516","template_family":"type_status_in_city","stage":"map","reasons":["token_boundary"],"detail":"token 'co.' straddles segment boundary","style":"conversational","transforms":["abbreviation"]}
+{"id":"sp-002630-v5","query":"could you find recently sold w private big back yard in jefferson county co.","spec_id":"sp-002630","template_family":"pet_family_friendly","stage":"map","reasons":["token_boundary"],"detail":"token 'co.' straddles segment boundary","style":"conversational","transforms":["reorder"]}
+{"id":"sp-003772-v1","query":"can u find 2 beds single family homes for sale by boise id.","spec_id":"sp-003772","template_family":"for_sale_phrases","stage":"map","reasons":["token_boundary"],"detail":"token 'd.' straddles segment boundary","style":"conversational","transforms":[]}
+{"id":"sp-000671-v0","query":"Thank you.","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000448-v0"}
+{"id":"sp-000770-v0","query":"Car insurance quotes","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000031-v0"}
+{"id":"sp-001107-v0","query":"First Time Buyer Programs.","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000865-v0"}
+{"id":"sp-001375-v0","query":"football scores","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000712-v0"}
+{"id":"sp-001757-v0","query":"What is the capital of france?","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000790-v0"}
+{"id":"sp-001806-v0","query":"Car insurance quotes","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000031-v0"}
+{"id":"sp-001926-v4","query":"ct","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-001595-v5"}
+{"id":"sp-002263-v0","query":"Anything","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000861-v0"}
+{"id":"sp-002414-v0","query":"Realtor near me.","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000999-v0"}
+{"id":"sp-002581-v1","query":"south fl news","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000663-v1"}
+{"id":"sp-002872-v0","query":"Agent reviews","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000800-v0"}
+{"id":"sp-003270-v0","query":"Realtor near me.","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000999-v0"}
+{"id":"sp-003439-v0","query":"Contact us","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-002470-v0"}
+{"id":"sp-003443-v0","query":"Realtor near me","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000974-v0"}
+{"id":"sp-003491-v6","query":"basement potential","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-002795-v1"}
+{"id":"sp-003522-v0","query":"Credit score","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000262-v0"}
+{"id":"sp-003613-v0","query":"what is the capital of france","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-002613-v0"}
+{"id":"sp-003757-v0","query":"Pizza delivery","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-002688-v0"}
+{"id":"sp-003788-v0","query":"Saved searches","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-001451-v0"}
+{"id":"sp-003825-v4","query":"newly constructed","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-001082-v2"}
+{"id":"sp-003903-v0","query":"How to tie a tie?","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-002787-v0"}
+{"id":"sp-003996-v0","query":"Quiet area?","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-002573-v0"}
+{"id":"sp-004008-v0","query":"Value history","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-002391-v0"}
+{"id":"sp-004110-v0","query":"Sell my place","stage":"global_reduce","reasons":["exact_duplicate"],"duplicate_of":"sp-000967-v0"}

@@ -1,0 +1,672 @@
+{
+  "status": "complete",
+  "stop_conditions": {
+    "valid_unique_rows_at_least_target": {
+      "value": 28531,
+      "required": 25000,
+      "passed": true
+    },
+    "final_row_count_equals_target": {
+      "value": 25000,
+      "required": 25000,
+      "passed": true
+    },
+    "no_invalid_bio_sequences": {
+      "value": 0,
+      "passed": true
+    },
+    "no_unknown_labels": {
+      "value": 0,
+      "passed": true
+    },
+    "no_split_leakage": {
+      "value": {
+        "groups_crossing_splits": 0,
+        "specs_crossing_splits": 0,
+        "queries_crossing_splits": 0
+      },
+      "passed": true
+    },
+    "exported_rows_all_valid": {
+      "value": 0,
+      "passed": true
+    },
+    "exported_files_consistent": {
+      "value": [],
+      "passed": true
+    },
+    "no_exact_duplicates_in_final": {
+      "value": 0,
+      "passed": true
+    },
+    "validation_reject_rate_at_most_10pct": {
+      "value": 0.0001,
+      "required": 0.1,
+      "passed": true
+    },
+    "exact_duplicate_rate_at_most_5pct": {
+      "value": 0.00084,
+      "required": 0.05,
+      "passed": true
+    },
+    "rare_label_coverage": {
+      "value": {
+        "failures": [],
+        "labels_with_zero_rows": []
+      },
+      "enforced": true,
+      "passed": true
+    },
+    "split_ratio_80_10_10": {
+      "value": {
+        "train": 0.799,
+        "validation": 0.10056,
+        "test": 0.10044
+      },
+      "tolerance": 0.00612,
+      "passed": true
+    },
+    "validator_fault_injection_all_caught": {
+      "value": [],
+      "passed": true
+    }
+  },
+  "candidate_rows": 28622,
+  "rejected_by_reason": {
+    "map:token_boundary": 3,
+    "exact_duplicate": 24
+  },
+  "rejected_total_rows_in_file": 27,
+  "near_duplicates_removed": 64,
+  "verification_from_disk": {
+    "files": {
+      "all_samples.jsonl": 25000,
+      "train.jsonl": 19975,
+      "validation.jsonl": 2514,
+      "test.jsonl": 2511,
+      "rejected.jsonl": 27,
+      "near_duplicates.jsonl": 64
+    },
+    "malformed_lines": 0,
+    "invalid_records": 0,
+    "problems": [],
+    "leakage": {
+      "groups_crossing_splits": 0,
+      "specs_crossing_splits": 0,
+      "queries_crossing_splits": 0
+    },
+    "leakage_examples": {},
+    "exact_duplicate_queries_in_final": 0
+  },
+  "verification_reason_counts": {},
+  "coverage": {
+    "enforced": true,
+    "min_amenity_rows_per_label": 50,
+    "min_type_status_rows_per_label": 300,
+    "min_groups_per_amenity": 12,
+    "labels_with_zero_rows": [],
+    "rarest_labels_by_rows": [
+      [
+        "amenity:fallout_shelter",
+        98
+      ],
+      [
+        "amenity:big_lot",
+        100
+      ],
+      [
+        "amenity:corner_lot",
+        100
+      ],
+      [
+        "amenity:storm_shelter",
+        101
+      ],
+      [
+        "amenity:recording_studio",
+        102
+      ],
+      [
+        "amenity:historic_house",
+        103
+      ],
+      [
+        "amenity:tax_lien",
+        107
+      ],
+      [
+        "amenity:cul_de_sac",
+        107
+      ],
+      [
+        "amenity:low_hoa",
+        111
+      ],
+      [
+        "amenity:lease_option",
+        114
+      ],
+      [
+        "amenity:furniture",
+        115
+      ],
+      [
+        "amenity:parking_garage",
+        121
+      ],
+      [
+        "amenity:community_gym",
+        123
+      ],
+      [
+        "amenity:jack_and_jill_bathroom",
+        126
+      ],
+      [
+        "amenity:shopping",
+        129
+      ]
+    ],
+    "rarest_labels_by_groups": [
+      [
+        "amenity:fallout_shelter",
+        14
+      ],
+      [
+        "amenity:big_lot",
+        15
+      ],
+      [
+        "amenity:corner_lot",
+        16
+      ],
+      [
+        "amenity:recording_studio",
+        16
+      ],
+      [
+        "amenity:historic_house",
+        17
+      ],
+      [
+        "amenity:storm_shelter",
+        17
+      ],
+      [
+        "amenity:tax_lien",
+        17
+      ],
+      [
+        "amenity:cul_de_sac",
+        18
+      ],
+      [
+        "amenity:lease_option",
+        18
+      ],
+      [
+        "amenity:low_hoa",
+        18
+      ],
+      [
+        "amenity:furniture",
+        19
+      ],
+      [
+        "amenity:parking_garage",
+        19
+      ],
+      [
+        "amenity:community_gym",
+        20
+      ],
+      [
+        "amenity:conversation_pit",
+        21
+      ],
+      [
+        "amenity:dining_room",
+        21
+      ]
+    ],
+    "labels_in_all_three_splits": 167,
+    "labels_total": 167,
+    "eval_split_presence_enforced": true,
+    "eval_split_presence_min_rows": 10000,
+    "failures": [],
+    "informational_not_enforced": [],
+    "passed": true
+  },
+  "fault_injection": [
+    {
+      "fault": "token_tag_count_differs",
+      "expected": "token_tag_length_mismatch",
+      "caught": true,
+      "reasons": [
+        "token_tag_length_mismatch"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "token_tag_count_differs",
+      "expected": "token_tag_length_mismatch",
+      "caught": true,
+      "reasons": [
+        "token_tag_length_mismatch"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "token_tag_count_differs",
+      "expected": "token_tag_length_mismatch",
+      "caught": true,
+      "reasons": [
+        "token_tag_length_mismatch"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "unknown_ner_tag",
+      "expected": "unknown_ner_label",
+      "caught": true,
+      "reasons": [
+        "unknown_ner_label:B-NOTALABEL"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "unknown_ner_tag",
+      "expected": "unknown_ner_label",
+      "caught": true,
+      "reasons": [
+        "unknown_ner_label:B-NOTALABEL"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "unknown_ner_tag",
+      "expected": "unknown_ner_label",
+      "caught": true,
+      "reasons": [
+        "unknown_ner_label:B-NOTALABEL"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "unknown_amenity_label",
+      "expected": "unknown_label",
+      "caught": true,
+      "reasons": [
+        "unknown_label:amenities_annotation:not_a_real_amenity"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "unknown_amenity_label",
+      "expected": "unknown_label",
+      "caught": true,
+      "reasons": [
+        "unknown_label:amenities_annotation:not_a_real_amenity"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "unknown_amenity_label",
+      "expected": "unknown_label",
+      "caught": true,
+      "reasons": [
+        "unknown_label:amenities_annotation:not_a_real_amenity"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "invalid_bio_sequence",
+      "expected": "invalid_bio",
+      "caught": true,
+      "reasons": [
+        "invalid_bio:I-tag I-SQFT at 6 does not continue a span (prev=O)"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "invalid_bio_sequence",
+      "expected": "invalid_bio",
+      "caught": true,
+      "reasons": [
+        "invalid_bio:I-tag I-SQFT at 2 does not continue a span (prev=O)"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "invalid_bio_sequence",
+      "expected": "invalid_bio",
+      "caught": true,
+      "reasons": [
+        "invalid_bio:I-tag I-SQFT at 0 does not continue a span (prev=O)"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "min_greater_than_max",
+      "expected": "min_exceeds_max",
+      "caught": true,
+      "reasons": [
+        "min_exceeds_max"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "min_greater_than_max",
+      "expected": "min_exceeds_max",
+      "caught": true,
+      "reasons": [
+        "min_exceeds_max"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "min_greater_than_max",
+      "expected": "min_exceeds_max",
+      "caught": true,
+      "reasons": [
+        "min_exceeds_max"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "malformed_min_max",
+      "expected": "min_max_malformed",
+      "caught": true,
+      "reasons": [
+        "min_max_malformed:min_max_not_pair"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "malformed_min_max",
+      "expected": "min_max_malformed",
+      "caught": true,
+      "reasons": [
+        "min_max_malformed:min_max_not_pair"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "malformed_min_max",
+      "expected": "min_max_malformed",
+      "caught": true,
+      "reasons": [
+        "min_max_malformed:min_max_not_pair"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "min_max_value_differs_from_spec",
+      "expected": "min_max_contradicts_spec",
+      "caught": true,
+      "reasons": [
+        "min_max_contradicts_spec"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "min_max_value_differs_from_spec",
+      "expected": "min_max_contradicts_spec",
+      "caught": true,
+      "reasons": [
+        "min_max_contradicts_spec"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "min_max_value_differs_from_spec",
+      "expected": "min_max_contradicts_spec",
+      "caught": true,
+      "reasons": [
+        "min_max_contradicts_spec"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "min_max_unknown_entity_key",
+      "expected": "min_max_malformed",
+      "caught": true,
+      "reasons": [
+        "min_max_malformed:unknown_key:lot_size"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "min_max_unknown_entity_key",
+      "expected": "min_max_malformed",
+      "caught": true,
+      "reasons": [
+        "min_max_malformed:unknown_key:lot_size"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "min_max_unknown_entity_key",
+      "expected": "min_max_malformed",
+      "caught": true,
+      "reasons": [
+        "min_max_malformed:unknown_key:lot_size"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "type_label_contradicts_ner_and_spec",
+      "expected": "labels_contradict_spec",
+      "caught": true,
+      "reasons": [
+        "labels_contradict_spec:listing_type",
+        "ner_label_conflict:listing_type"
+      ],
+      "id": "sp-000001-v0",
+      "query": "Looking for sale pending farm property throughout South Bay priced 5.25 million as well as over 5 acre lot"
+    },
+    {
+      "fault": "type_label_contradicts_ner_and_spec",
+      "expected": "labels_contradict_spec",
+      "caught": true,
+      "reasons": [
+        "labels_contradict_spec:listing_type",
+        "ner_label_conflict:listing_type"
+      ],
+      "id": "sp-000001-v1",
+      "query": "ranch property pending sale in south bay with min 5 acre lot $5.25m if any!"
+    },
+    {
+      "fault": "type_label_contradicts_ner_and_spec",
+      "expected": "labels_contradict_spec",
+      "caught": true,
+      "reasons": [
+        "labels_contradict_spec:listing_type",
+        "ner_label_conflict:listing_type"
+      ],
+      "id": "sp-000001-v2",
+      "query": "sale pending farm 5 acre or more south bay 5,250,000"
+    },
+    {
+      "fault": "required_constraint_omitted",
+      "expected": "missing_constraint",
+      "caught": true,
+      "reasons": [
+        "missing_constraint:numeric:1"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "required_constraint_omitted",
+      "expected": "missing_constraint",
+      "caught": true,
+      "reasons": [
+        "missing_constraint:numeric:1"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "required_constraint_omitted",
+      "expected": "missing_constraint",
+      "caught": true,
+      "reasons": [
+        "missing_constraint:numeric:1"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "query_contradicts_spec_value",
+      "expected": "query_contradicts_spec",
+      "caught": true,
+      "reasons": [
+        "query_contradicts_spec:numeric:0:text parses to [7500, None], spec says [7501, None]"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you."
+    },
+    {
+      "fault": "query_contradicts_spec_value",
+      "expected": "query_contradicts_spec",
+      "caught": true,
+      "reasons": [
+        "query_contradicts_spec:numeric:0:text parses to [7500, None], spec says [7501, None]"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet"
+    },
+    {
+      "fault": "query_contradicts_spec_value",
+      "expected": "query_contradicts_spec",
+      "caught": true,
+      "reasons": [
+        "query_contradicts_spec:numeric:0:text parses to [7500, None], spec says [7501, None]"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet"
+    },
+    {
+      "fault": "ner_tags_edited_after_labelling",
+      "expected": "ner_tags_not_matching_spec",
+      "caught": true,
+      "reasons": [
+        "ner_tags_not_matching_spec"
+      ],
+      "id": "sp-000001-v0",
+      "query": "Looking for sale pending farm property throughout South Bay priced 5.25 million as well as over 5 acre lot"
+    },
+    {
+      "fault": "ner_tags_edited_after_labelling",
+      "expected": "ner_tags_not_matching_spec",
+      "caught": true,
+      "reasons": [
+        "ner_tags_not_matching_spec"
+      ],
+      "id": "sp-000001-v1",
+      "query": "ranch property pending sale in south bay with min 5 acre lot $5.25m if any!"
+    },
+    {
+      "fault": "ner_tags_edited_after_labelling",
+      "expected": "ner_tags_not_matching_spec",
+      "caught": true,
+      "reasons": [
+        "ner_tags_not_matching_spec"
+      ],
+      "id": "sp-000001-v2",
+      "query": "sale pending farm 5 acre or more south bay 5,250,000"
+    },
+    {
+      "fault": "query_edited_after_labelling",
+      "expected": "segments_do_not_rebuild_query",
+      "caught": true,
+      "reasons": [
+        "segments_do_not_rebuild_query"
+      ],
+      "id": "sp-000000-v0",
+      "query": "Our family is seeking listings with 7,500 sq ft or more thank you. extra"
+    },
+    {
+      "fault": "query_edited_after_labelling",
+      "expected": "segments_do_not_rebuild_query",
+      "caught": true,
+      "reasons": [
+        "segments_do_not_rebuild_query"
+      ],
+      "id": "sp-000000-v1",
+      "query": "i need above 7500 square feet extra"
+    },
+    {
+      "fault": "query_edited_after_labelling",
+      "expected": "segments_do_not_rebuild_query",
+      "caught": true,
+      "reasons": [
+        "segments_do_not_rebuild_query"
+      ],
+      "id": "sp-000000-v2",
+      "query": "min 7500 square feet extra"
+    },
+    {
+      "fault": "malformed_json_line",
+      "expected": "malformed_json",
+      "caught": true,
+      "reasons": [
+        "malformed_json"
+      ],
+      "id": null,
+      "query": null
+    }
+  ],
+  "validator_reason_catalog": [
+    "malformed_json",
+    "schema",
+    "token_tag_length_mismatch",
+    "unknown_ner_label",
+    "unknown_label",
+    "invalid_bio",
+    "tokenization_mismatch",
+    "segments_do_not_rebuild_query",
+    "min_max_malformed",
+    "min_exceeds_max",
+    "min_max_span_mismatch",
+    "min_max_contradicts_spec",
+    "labels_contradict_spec",
+    "missing_constraint",
+    "unknown_segment_item",
+    "wrong_entity_for_item",
+    "query_contradicts_spec",
+    "surface_clean_mismatch",
+    "ner_tags_not_matching_spec",
+    "ner_label_conflict",
+    "unlabelled_constraint_word",
+    "out_of_domain_has_labels",
+    "token_boundary",
+    "exact_duplicate",
+    "split_leakage"
+  ]
+}

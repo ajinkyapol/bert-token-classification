@@ -1,0 +1,28 @@
+[project]
+name = "bert-token-classifier"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "accelerate>=1.16.0",
+    "datasets>=5.2.0",
+    "evaluate>=0.4.6",
+    "scikit-learn>=1.9.1",
+    "seqeval>=1.2.2",
+    "torch>=2.15.0",
+    "transformers>=5.24.0",
+]
+
+[project.scripts]
+bert-token-classifier = "bert_token_classifier:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "jupyterlab>=4.6.6",
+]

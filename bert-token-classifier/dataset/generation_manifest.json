@@ -1,0 +1,687 @@
+{
+  "status": "complete",
+  "generator_version": "1.0.0",
+  "schema_version": "1.0",
+  "created_at": "2026-11-24T15:53:37+00:00",
+  "config": {
+    "profile": "full",
+    "target_rows": 25000,
+    "seed": 42,
+    "specs_per_shard": 250,
+    "variants_per_spec": 7,
+    "overshoot": 1.1,
+    "output_root": null,
+    "tokenizer": "auto",
+    "near_duplicate_jaccard": 0.9,
+    "max_validation_reject_rate": 0.1,
+    "max_exact_duplicate_rate": 0.05,
+    "min_amenity_rows_per_label": 50,
+    "min_type_status_rows_per_label": 300,
+    "min_groups_per_amenity": 12,
+    "sweep_labels_per_spec": 3
+  },
+  "config_hash": "6a23869d95665f33",
+  "command": "/Users/ajinkya.pol/work/company/realtor/ml.worktrees/generate-synthetic-training-queries/projects/listing_sequences/user_query_classification/data_generation/synthetic_queries/orchestrator.py run --profile full --rebuild-final",
+  "git_commit": "03caf6d2b8823a2199284ebd67f034493282d890",
+  "python": "3.9.6",
+  "tokenizer": {
+    "name": "spacy",
+    "spacy_version": "3.8.11"
+  },
+  "label_sources": {
+    "multi_label_constants": "modeling/src/multi_label_constants.py",
+    "ner_allowed_labels": "data_generation/src/llm_calls.py::ALLOWED_LABELS",
+    "min_max_constants": "modeling/src/min_max_constants.py",
+    "amenity_phrase_variations": "data_generation/src/constants/synthetic_user_queries_multi_label_degnerate_queries_up_to_3_extra_features_amenities_with_variations_feature_variations_manual_edits_new_edits_2026_02_27.json"
+  },
+  "source_file_sha256": {
+    "multi_label_constants.py": "bb3ef9cb464bcae888034a0d5154fd664c5d6b170154b49ccdf50a85c33dcf8d",
+    "llm_calls.py": "6e3c4226ef5d5e78bd4bc1cbe9bfe536c9eb9b12e458c83542adda44d7cb9d2c",
+    "min_max_constants.py": "0b8cc675bc1174d261ba791b0bb214ec30dc6cacbb4ac84e5c00f150b72cc27c",
+    "amenity_phrase_variations.json": "98c576c838e62c2a02afda1a2d604d766f38f682cef1e69d1f76e96488433d16"
+  },
+  "template_families": [
+    {
+      "name": "type_in_city",
+      "group": "core",
+      "weight": 9.0
+    },
+    {
+      "name": "type_status_in_city",
+      "group": "core",
+      "weight": 7.0
+    },
+    {
+      "name": "location_only",
+      "group": "core",
+      "weight": 3.0
+    },
+    {
+      "name": "zip_search",
+      "group": "core",
+      "weight": 3.0
+    },
+    {
+      "name": "county_search",
+      "group": "core",
+      "weight": 2.0
+    },
+    {
+      "name": "neighborhood_search",
+      "group": "core",
+      "weight": 2.5
+    },
+    {
+      "name": "address_lookup",
+      "group": "core",
+      "weight": 2.0
+    },
+    {
+      "name": "school_district_homes",
+      "group": "core",
+      "weight": 2.0
+    },
+    {
+      "name": "proximity_landmark",
+      "group": "core",
+      "weight": 2.5
+    },
+    {
+      "name": "metro_alias_homes",
+      "group": "core",
+      "weight": 2.0
+    },
+    {
+      "name": "state_wide_search",
+      "group": "core",
+      "weight": 1.2
+    },
+    {
+      "name": "status_first_listings",
+      "group": "core",
+      "weight": 3.0
+    },
+    {
+      "name": "beds_type_loc",
+      "group": "numeric",
+      "weight": 7.0
+    },
+    {
+      "name": "beds_baths_type_loc",
+      "group": "numeric",
+      "weight": 7.0
+    },
+    {
+      "name": "price_cap_type_loc",
+      "group": "numeric",
+      "weight": 6.0
+    },
+    {
+      "name": "price_range_type_loc",
+      "group": "numeric",
+      "weight": 4.0
+    },
+    {
+      "name": "price_floor_luxury",
+      "group": "numeric",
+      "weight": 1.5
+    },
+    {
+      "name": "sqft_focus",
+      "group": "numeric",
+      "weight": 3.5
+    },
+    {
+      "name": "lot_acres_focus",
+      "group": "numeric",
+      "weight": 3.5
+    },
+    {
+      "name": "lot_sqft_focus",
+      "group": "numeric",
+      "weight": 3.0
+    },
+    {
+      "name": "home_age_focus",
+      "group": "numeric",
+      "weight": 2.0
+    },
+    {
+      "name": "hoa_fee_focus",
+      "group": "numeric",
+      "weight": 2.5
+    },
+    {
+      "name": "garage_focus",
+      "group": "numeric",
+      "weight": 2.5
+    },
+    {
+      "name": "stories_focus",
+      "group": "numeric",
+      "weight": 3.0
+    },
+    {
+      "name": "full_spec_long",
+      "group": "numeric",
+      "weight": 4.5
+    },
+    {
+      "name": "many_constraints",
+      "group": "numeric",
+      "weight": 3.0
+    },
+    {
+      "name": "numbers_only_no_location",
+      "group": "numeric",
+      "weight": 2.5
+    },
+    {
+      "name": "rent_budget",
+      "group": "status",
+      "weight": 4.5
+    },
+    {
+      "name": "apartment_rent_beds",
+      "group": "status",
+      "weight": 3.5
+    },
+    {
+      "name": "studio_budget",
+      "group": "status",
+      "weight": 1.5
+    },
+    {
+      "name": "type_amenity_loc",
+      "group": "amenity",
+      "weight": 7.0
+    },
+    {
+      "name": "two_amenities",
+      "group": "amenity",
+      "weight": 4.5
+    },
+    {
+      "name": "amenity_only",
+      "group": "amenity",
+      "weight": 3.5
+    },
+    {
+      "name": "three_amenities",
+      "group": "amenity",
+      "weight": 2.5
+    },
+    {
+      "name": "amenity_with_numeric",
+      "group": "amenity",
+      "weight": 5.0
+    },
+    {
+      "name": "view_waterfront",
+      "group": "amenity",
+      "weight": 2.5
+    },
+    {
+      "name": "kitchen_features",
+      "group": "amenity",
+      "weight": 2.0
+    },
+    {
+      "name": "outdoor_living",
+      "group": "amenity",
+      "weight": 3.0
+    },
+    {
+      "name": "community_amenities",
+      "group": "amenity",
+      "weight": 2.5
+    },
+    {
+      "name": "condition_and_age",
+      "group": "amenity",
+      "weight": 2.0
+    },
+    {
+      "name": "accessibility_senior",
+      "group": "amenity",
+      "weight": 1.5
+    },
+    {
+      "name": "land_features",
+      "group": "amenity",
+      "weight": 2.0
+    },
+    {
+      "name": "luxury_features",
+      "group": "amenity",
+      "weight": 1.5
+    },
+    {
+      "name": "pet_family_friendly",
+      "group": "amenity",
+      "weight": 2.0
+    },
+    {
+      "name": "amenity_rare_sweep",
+      "group": "amenity",
+      "weight": 0.0
+    },
+    {
+      "name": "pending_listings",
+      "group": "status",
+      "weight": 2.0
+    },
+    {
+      "name": "foreclosure_search",
+      "group": "status",
+      "weight": 2.5
+    },
+    {
+      "name": "just_sold_comps",
+      "group": "status",
+      "weight": 2.0
+    },
+    {
+      "name": "sale_or_pending",
+      "group": "status",
+      "weight": 1.5
+    },
+    {
+      "name": "for_sale_phrases",
+      "group": "status",
+      "weight": 2.5
+    },
+    {
+      "name": "duplex_investment",
+      "group": "type",
+      "weight": 2.0
+    },
+    {
+      "name": "multi_family_search",
+      "group": "type",
+      "weight": 2.0
+    },
+    {
+      "name": "farm_ranch_acres",
+      "group": "type",
+      "weight": 2.0
+    },
+    {
+      "name": "mobile_home_budget",
+      "group": "type",
+      "weight": 1.8
+    },
+    {
+      "name": "commercial_space",
+      "group": "type",
+      "weight": 2.0
+    },
+    {
+      "name": "condo_hoa_search",
+      "group": "type",
+      "weight": 2.5
+    },
+    {
+      "name": "townhome_family",
+      "group": "type",
+      "weight": 1.5
+    },
+    {
+      "name": "land_lot_price",
+      "group": "type",
+      "weight": 2.5
+    },
+    {
+      "name": "mixed_types",
+      "group": "type",
+      "weight": 2.0
+    },
+    {
+      "name": "style_type_loc",
+      "group": "style",
+      "weight": 3.0
+    },
+    {
+      "name": "style_amenity",
+      "group": "style",
+      "weight": 1.5
+    },
+    {
+      "name": "family_needs",
+      "group": "natural",
+      "weight": 3.0
+    },
+    {
+      "name": "retiree_voice",
+      "group": "natural",
+      "weight": 2.0
+    },
+    {
+      "name": "investor_voice",
+      "group": "natural",
+      "weight": 2.5
+    },
+    {
+      "name": "first_time_buyer",
+      "group": "natural",
+      "weight": 2.0
+    },
+    {
+      "name": "relocation_voice",
+      "group": "natural",
+      "weight": 2.0
+    },
+    {
+      "name": "hoa_mention_ambiguous",
+      "group": "edge",
+      "weight": 1.5
+    },
+    {
+      "name": "no_hoa_request",
+      "group": "edge",
+      "weight": 2.0
+    },
+    {
+      "name": "bare_units",
+      "group": "edge",
+      "weight": 1.5
+    },
+    {
+      "name": "negated_amenity",
+      "group": "edge",
+      "weight": 1.5
+    },
+    {
+      "name": "new_construction_search",
+      "group": "edge",
+      "weight": 2.0
+    },
+    {
+      "name": "older_home_ambiguous",
+      "group": "edge",
+      "weight": 0.8
+    },
+    {
+      "name": "half_bath_formats",
+      "group": "edge",
+      "weight": 1.0
+    },
+    {
+      "name": "out_of_domain_query",
+      "group": "edge",
+      "weight": 8.0
+    },
+    {
+      "name": "no_feature_realestate",
+      "group": "edge",
+      "weight": 3.0
+    }
+  ],
+  "num_template_families": 75,
+  "plan": {
+    "num_specs": 4225,
+    "num_spec_shards": 17,
+    "specs_per_shard": 250,
+    "variants_per_spec": 7
+  },
+  "shards": [
+    {
+      "index": 0,
+      "specs": 250,
+      "mapped_rows": 1718,
+      "map_rejects": 0,
+      "reduce_valid": 1718,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00000.jsonl": "6aae0eb024c89a1fff7bc8289e93380e48aabb5e58b91a2ecef7d49829c9b202",
+        "mapped_00000.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00000.jsonl": "6aae0eb024c89a1fff7bc8289e93380e48aabb5e58b91a2ecef7d49829c9b202",
+        "reduced_00000.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 1,
+      "specs": 250,
+      "mapped_rows": 1688,
+      "map_rejects": 0,
+      "reduce_valid": 1688,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00001.jsonl": "dce6895740bae3900f0cf3b8a704427ef5380a3e45ff0fd61ab812ec4ffea88c",
+        "mapped_00001.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00001.jsonl": "dce6895740bae3900f0cf3b8a704427ef5380a3e45ff0fd61ab812ec4ffea88c",
+        "reduced_00001.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 2,
+      "specs": 250,
+      "mapped_rows": 1678,
+      "map_rejects": 1,
+      "reduce_valid": 1678,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00002.jsonl": "1605dc6b2af26f31eb0f1f5a61ddfbecaa8ce33868e49c5f01f3a48661d33ee5",
+        "mapped_00002.rejected.jsonl": "7a0a45a1176883aafc7d6b5f23eff5fae2c1ab3a306acba5cef6898152240670",
+        "reduced_00002.jsonl": "1605dc6b2af26f31eb0f1f5a61ddfbecaa8ce33868e49c5f01f3a48661d33ee5",
+        "reduced_00002.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 3,
+      "specs": 250,
+      "mapped_rows": 1658,
+      "map_rejects": 0,
+      "reduce_valid": 1658,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00003.jsonl": "5187484e06fb6786154a932ef8ec79eeced3244a63fdf6c262d2dab02762283e",
+        "mapped_00003.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00003.jsonl": "5187484e06fb6786154a932ef8ec79eeced3244a63fdf6c262d2dab02762283e",
+        "reduced_00003.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 4,
+      "specs": 250,
+      "mapped_rows": 1699,
+      "map_rejects": 0,
+      "reduce_valid": 1699,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00004.jsonl": "865881685759dae67cbf8b4d9f6e71a11ea00a29d8ced55de2a3cd43c374e721",
+        "mapped_00004.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00004.jsonl": "865881685759dae67cbf8b4d9f6e71a11ea00a29d8ced55de2a3cd43c374e721",
+        "reduced_00004.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 5,
+      "specs": 250,
+      "mapped_rows": 1685,
+      "map_rejects": 0,
+      "reduce_valid": 1685,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00005.jsonl": "2802e5534ff0740c8d491033e6fb8506e2f7fce4b00b4c526baa6edd1c3bc802",
+        "mapped_00005.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00005.jsonl": "2802e5534ff0740c8d491033e6fb8506e2f7fce4b00b4c526baa6edd1c3bc802",
+        "reduced_00005.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 6,
+      "specs": 250,
+      "mapped_rows": 1728,
+      "map_rejects": 0,
+      "reduce_valid": 1728,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00006.jsonl": "8fba6c6fd5bd89df39124b50e2c63ed8765b74d92565cf6198ac1c47f1364a36",
+        "mapped_00006.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00006.jsonl": "8fba6c6fd5bd89df39124b50e2c63ed8765b74d92565cf6198ac1c47f1364a36",
+        "reduced_00006.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 7,
+      "specs": 250,
+      "mapped_rows": 1695,
+      "map_rejects": 0,
+      "reduce_valid": 1695,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00007.jsonl": "bd30dee513f142bdccadb1d5df5e5ae563ab9e158972b46eb23b0318eaa811a4",
+        "mapped_00007.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00007.jsonl": "bd30dee513f142bdccadb1d5df5e5ae563ab9e158972b46eb23b0318eaa811a4",
+        "reduced_00007.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 8,
+      "specs": 250,
+      "mapped_rows": 1711,
+      "map_rejects": 0,
+      "reduce_valid": 1711,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00008.jsonl": "a2d002ee11f22919834208cd2f5f99d363a923875504affa91859d996721e6b4",
+        "mapped_00008.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00008.jsonl": "a2d002ee11f22919834208cd2f5f99d363a923875504affa91859d996721e6b4",
+        "reduced_00008.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 9,
+      "specs": 250,
+      "mapped_rows": 1691,
+      "map_rejects": 0,
+      "reduce_valid": 1691,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00009.jsonl": "b5a507566bb3c89dad42c2dd6c0b33fad11cdf435baef8c00c508a4dab4797d1",
+        "mapped_00009.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00009.jsonl": "b5a507566bb3c89dad42c2dd6c0b33fad11cdf435baef8c00c508a4dab4797d1",
+        "reduced_00009.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 10,
+      "specs": 250,
+      "mapped_rows": 1693,
+      "map_rejects": 1,
+      "reduce_valid": 1693,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00010.jsonl": "c9cc5bdab2587c9fc35451ccdab5d9cdfb9524cb8bf3d8ff093cd7d789e2129d",
+        "mapped_00010.rejected.jsonl": "72fe6fc25cad0c5e29cf0631f9f32503a69f9a1bf725e423574bf5a49135f2cd",
+        "reduced_00010.jsonl": "c9cc5bdab2587c9fc35451ccdab5d9cdfb9524cb8bf3d8ff093cd7d789e2129d",
+        "reduced_00010.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 11,
+      "specs": 250,
+      "mapped_rows": 1702,
+      "map_rejects": 0,
+      "reduce_valid": 1702,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00011.jsonl": "3b7f2718f1a1a4488d43455fbc85b7c3556d7ab60507c7294fc8de19c88993f8",
+        "mapped_00011.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00011.jsonl": "3b7f2718f1a1a4488d43455fbc85b7c3556d7ab60507c7294fc8de19c88993f8",
+        "reduced_00011.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 12,
+      "specs": 250,
+      "mapped_rows": 1700,
+      "map_rejects": 0,
+      "reduce_valid": 1700,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00012.jsonl": "62c7f5e28cab122bd34c90118491c7f92a25035605d18497581b1d6d5ca80c65",
+        "mapped_00012.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00012.jsonl": "62c7f5e28cab122bd34c90118491c7f92a25035605d18497581b1d6d5ca80c65",
+        "reduced_00012.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 13,
+      "specs": 250,
+      "mapped_rows": 1695,
+      "map_rejects": 0,
+      "reduce_valid": 1695,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00013.jsonl": "c8513539833b7aaceeacbc7e2998618fdc59867e29eba68f0a1e71355f3fafa1",
+        "mapped_00013.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00013.jsonl": "c8513539833b7aaceeacbc7e2998618fdc59867e29eba68f0a1e71355f3fafa1",
+        "reduced_00013.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 14,
+      "specs": 250,
+      "mapped_rows": 1697,
+      "map_rejects": 0,
+      "reduce_valid": 1697,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00014.jsonl": "19eefc85702ce85ae760e353c62dfc9b7d6ae0976f10f028ae549515577484e4",
+        "mapped_00014.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00014.jsonl": "19eefc85702ce85ae760e353c62dfc9b7d6ae0976f10f028ae549515577484e4",
+        "reduced_00014.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 15,
+      "specs": 250,
+      "mapped_rows": 1663,
+      "map_rejects": 1,
+      "reduce_valid": 1663,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00015.jsonl": "5d1243a928b6e32b35f2908ebe6eafbe72847e372cd9620d684163acef93d69a",
+        "mapped_00015.rejected.jsonl": "7287b59b34ca7e5c1c334f8006e13c55885b3163534c722d9906dfef5c8e067f",
+        "reduced_00015.jsonl": "5d1243a928b6e32b35f2908ebe6eafbe72847e372cd9620d684163acef93d69a",
+        "reduced_00015.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "index": 16,
+      "specs": 225,
+      "mapped_rows": 1518,
+      "map_rejects": 0,
+      "reduce_valid": 1518,
+      "reduce_rejects": 0,
+      "sha256": {
+        "mapped_00016.jsonl": "e80ae4e5e27a044ac00afa8fe1c543895b195f1f164b0b4a76577d4096448748",
+        "mapped_00016.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reduced_00016.jsonl": "e80ae4e5e27a044ac00afa8fe1c543895b195f1f164b0b4a76577d4096448748",
+        "reduced_00016.rejected.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "output_row_counts": {
+    "all_samples": 25000,
+    "train": 19975,
+    "validation": 2514,
+    "test": 2511,
+    "rejected": 27,
+    "near_duplicates": 64
+  },
+  "dataset_sha256": {
+    "train.jsonl": "9712279f6274de0d1fececdff04d1a51e00fc1451ca1c4d8cf9720410b5172f2",
+    "validation.jsonl": "50a73c88a06f633b67d029d1cee2d7fc5da029df5b69eb42fb8ee8227dd88bd9",
+    "test.jsonl": "c8bb089520ae760b64051c0346f5cf7b4c593dec3fdda8bc4c9629db0df554db",
+    "all_samples.jsonl": "7cb83576b5829a2cdf0b61b06a80f6f2626a037bde5425ffdca3a863f69fe4f8",
+    "rejected.jsonl": "7ac4d8be60e624c081c40f90904f5b95c63f90de5c8c214c0c4b83cd52bda38a",
+    "near_duplicates.jsonl": "294d77588ff9afa5ff3c502bb3e3f15ac34f83bd21b6a9e17c23839c697b6d4a",
+    "statistics.json": "cc07dc2109140f106c16551a5f66f4da518338ca6717d7c58d90cd7fd2f4f54c",
+    "allowed_labels.json": "7df5b0038d4af2a4ba428290bb958c3802cc528e1adc63d43dacd5a9be741d04",
+    "validation_report.json": "81280b1fd5fe25c6f2351b8f0ce2462ea39f3e248c07f51eb9f1b76a0e2259f3"
+  },
+  "elapsed_seconds": 22.6
+}
